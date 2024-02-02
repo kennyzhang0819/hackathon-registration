@@ -1,5 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        karla: ['Karla', 'sans-serif'],
+        spaceGrotesk: ['Space Grotesk', 'sans-serif'],
+      },
+      colors: {
+        'hackathon-blue': '#3D68BB',
+        'hackathon-brown': '#A67B5B',
+      },
+      borderRadius: {
+        'xl': '1rem',
+      },
+    },
+  },
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
