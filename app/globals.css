@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --hackathon-blue: #3D68BB;
+  --hackathon-dark-blue: #223f77;
+  --hackathon-brown: #A67B5B;
+  --font-karla: 'Karla', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,18 +21,28 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-karla);
+  background-color: #fff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk);
+}
+
+/* Custom utilities */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .form-field {
+    @apply text-hackathon-dark-blue;
+  }
+
+  .form-input {
+    @apply mt-3 block w-1/2 h-12 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl text-start;
+  }
+
+  .form-button {
+    @apply inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-xl text-white bg-hackathon-blue hover:bg-opacity-90 focus:outline-none;
   }
 }
