@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        
         'karla': 'var(--font-karla)',
         'space-grotesk': 'var(--font-space-grotesk)',
       },

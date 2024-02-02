@@ -3,15 +3,17 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const karla = Karla({
-  weight: ['200', '300', '400', '500'],
+  weight: ['200', '300', '400', '500', '600', '700'],
   subsets: ["latin"],
-  display: "swap"
+  display: "swap",
+  variable: "--font-karla"
 });
 
 const spaceGrotesk = Space_Grotesk({
-  weight: ['300', '400', '500', '600'],
+  weight: ['600', '700'],
   subsets: ["latin"],
-  display: "swap"
+  display: "swap",
+  variable: "--font-space-grotesk"
 });
 
 export const metadata = {
@@ -22,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <body className={karla.className + ' ' + spaceGrotesk.className}>
+      <body className={spaceGrotesk.variable + ' ' + karla.variable}>
         {children}
       </body>
     </>

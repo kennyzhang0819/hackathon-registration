@@ -30,16 +30,32 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-space-grotesk);
+  font-size: xx-large;
+  font-weight: 600;
+  color: var(--hackathon-dark-blue)
 }
 
 /* Custom utilities */
 @layer utilities {
   .form-field {
-    @apply text-hackathon-dark-blue;
+    font-family: var(--font-space-grotesk);
+    font-weight: 600;
+    font-size: larger;
+    color: var(--hackathon-dark-blue)
   }
 
   .form-input {
-    @apply mt-3 block w-1/2 h-12 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl text-start;
+    @apply mt-3 block w-1/2 h-14 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
+              outline-none focus:ring-2 focus:ring-hackathon-blue focus:ring-opacity-50;
+    padding: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    font-family: var(--font-karla);
+    font-weight: 400;
+    font-size: large;
+  }
+
+  .form-input:hover {
+    border-color: #4A90E2;
   }
 
   .form-button {
