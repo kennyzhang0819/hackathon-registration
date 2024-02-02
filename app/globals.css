@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--hackathon-dark-blue)
 }
 
+
 /* Custom utilities */
 @layer utilities {
   .form-field {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .form-input {
-    @apply mt-3 block w-1/2 h-14 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
+    @apply mt-3 block w-96 h-14 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
               outline-none focus:ring-2 focus:ring-hackathon-blue focus:ring-opacity-50;
     padding: 1rem;
     transition: border-color 0.3s ease-in-out;
@@ -61,4 +62,5 @@ h1, h2, h3, h4, h5, h6 {
   .form-button {
     @apply inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-xl text-white bg-hackathon-blue hover:bg-opacity-90 focus:outline-none;
   }
+
 }

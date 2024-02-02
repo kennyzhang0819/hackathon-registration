@@ -52,14 +52,14 @@ const RegistrationForm = () => {
       </div>
 
       <div>
-        <label htmlFor="essay" className="form-field">Essay</label>
+        <label htmlFor="essay" className="form-field">Why are you interested in attending Cal Hacks 11.0? What are you interested in building?</label>
         <textarea
           name="essay"
           id="essay"
           rows="4"
           required
           className="form-input"
-          placeholder="Why are you interested in attending Cal Hacks 11.0? What are you interested in building? (1000 character maximum)"
+          placeholder="1000 character maximum"
           maxLength="1000"
         ></textarea>
       </div>
