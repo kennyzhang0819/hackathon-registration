@@ -35,10 +35,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--hackathon-dark-blue)
 }
 
-
-/* Custom utilities */
 @layer utilities {
+
+  .main-container {
+    @apply container px-32 py-8;
+  }
+
   .form-field {
+    @apply mt-4 mb-4;
     font-family: var(--font-space-grotesk);
     font-weight: 600;
     font-size: larger;
@@ -46,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .form-input {
-    @apply mt-3 block w-96 h-14 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
+    @apply mt-4 mb-4 block w-1/4 min-w-80 h-14 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
               outline-none focus:ring-2 focus:ring-hackathon-blue focus:ring-opacity-50;
     padding: 1rem;
     transition: border-color 0.3s ease-in-out;
@@ -55,12 +59,90 @@ h1, h2, h3, h4, h5, h6 {
     font-size: large;
   }
 
-  .form-input:hover {
-    border-color: #4A90E2;
+  .form-input-essay {
+    @apply mt-4 mb-4 block w-1/2 h-40 min-w-80 border-0 border-b-2 border-gray-300 focus:border-hackathon-blue rounded-xl
+              outline-none focus:ring-2 focus:ring-hackathon-blue focus:ring-opacity-50;
+    padding: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    font-family: var(--font-karla);
+    font-weight: 400;
+    font-size: large;
+  }
+
+  .form-input:hover, .form-input:focus {
+    @apply shadow-md;
+    border-color: var(--hackathon-blue);
   }
 
   .form-button {
-    @apply inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-xl text-white bg-hackathon-blue hover:bg-opacity-90 focus:outline-none;
+    @apply mt-4 mb-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-xl text-white bg-hackathon-blue hover:bg-opacity-90 focus:outline-none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    font-size: large;
   }
 
+  .form-button:hover {
+    @apply scale-105;
+    background-color: var(--hackathon-dark-blue);
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    width: 100px;
+    z-index: 10;
+  }
+
+  .bear-image-container {
+    position: absolute;
+    top: 20rem;
+    right: 10rem;
+    height: auto;
+    z-index: 5;
+  }
+
+  .header-footer {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 1400px) {
+  .logo-container {
+    top: 1.5rem;
+    left: 4rem;
+    width: 85px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo-container {
+    top: 2rem;
+    left: 3.5rem;
+    width: 70px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .logo-container {
+    top: 1.5rem;
+    left: 3rem;
+    width: 60px;
+  }
+  .bear-image-container {
+    display: none;
+  }
+}
+
+@media (max-width: 835px) {
+  .logo-container {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-container {
+    @apply px-8;
+  }
 }

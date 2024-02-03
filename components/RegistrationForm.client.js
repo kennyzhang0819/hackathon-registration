@@ -14,21 +14,21 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form className="space-y-4">
+    <form>
 
       <div>
         <label htmlFor="fullName" className="form-field">Participant Full Name</label>
-        <input type="text" name="fullName" id="fullName" required className="form-input"/>
+        <input type="text" name="fullName" id="fullName" placeholder='John Doe' required className="form-input"/>
       </div>
 
       <div>
         <label htmlFor="university" className="form-field">University</label>
-        <input type="text" name="university" id="university" required className="form-input"/>
+        <input type="text" name="university" id="university" placeholder='University of California, Berkeley' required className="form-input"/>
       </div>
       
       <div>
         <label htmlFor="major" className="form-field">Major</label>
-        <input type="text" name="major" id="major" required className="form-input"/>
+        <input type="text" name="major" id="major" placeholder='Computer Science' required className="form-input"/>
       </div>
 
       <div>
@@ -48,7 +48,7 @@ const RegistrationForm = () => {
 
       <div>
         <label htmlFor="country" className="form-field">Country of Residence</label>
-        <input type="text" name="country" id="country" required className="form-input" />
+        <input type="text" name="country" id="country" placeholder='United States' required className="form-input" />
       </div>
 
       <div>
@@ -58,17 +58,10 @@ const RegistrationForm = () => {
           id="essay"
           rows="4"
           required
-          className="form-input"
+          className="form-input-essay"
           placeholder="1000 character maximum"
           maxLength="1000"
         ></textarea>
-      </div>
-
-      <div>
-        <label>
-          <input type="checkbox" name="ageConfirmation" required />
-          <span className="ml-2 form-field">I confirm I am 18 years of age or older</span>
-        </label>
       </div>
 
       <div>
@@ -88,6 +81,13 @@ const RegistrationForm = () => {
             <iframe src={previewUrl} className="w-full h-64"></iframe>
           </div>
         )}
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="ageConfirmation" required />
+          <span className="ml-2 form-field">I confirm I am 18 years of age or older</span>
+        </label>
       </div>
       
       <div>
